@@ -8,13 +8,13 @@ import logo from "../../../public/assets/images/logos/alternative-airlines.jpg";
 import menu from "../../../public/assets/icons/menu.svg";
 import close from "../../../public/assets/icons/close.png";
 
-// Navigation menu items
-import data from "../../../data/navigation.json";
+import { Navigation } from "../../molecules/Navigation/Navigation";
 
-export const Header = () => {
+import homeLinks from "../../../data/navigation.json";
+
+export const Header = ({ data }) => {
   const [menuEnabled, setMenuEnabled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -34,10 +34,6 @@ export const Header = () => {
     setMenuEnabled(!menuEnabled);
   };
 
-  const handleDropdownClick = (item) => {
-    setActiveDropdown(activeDropdown === item.label ? null : item.label);
-  };
-
   return (
     <Container type="global" className={styles.header}>
       <div className={styles.header_logo}>
@@ -45,26 +41,7 @@ export const Header = () => {
       </div>
       <div className={styles.header_navigation_menu}>
         {(!isMobile || (isMobile && menuEnabled)) && (
-          <ul>
-            {data.primary?.map((item) => (
-              <li
-                key={item.label}
-                className={item.sublinks ? styles.dropdownIcon : ""}
-                onClick={() => item.sublinks && handleDropdownClick(item)}
-              >
-                {item.label}
-                {item.sublinks && activeDropdown === item.label && (
-                  <ul className={styles.dropdown_container}>
-                    {item.sublinks.map((dropdownItem, index) => (
-                      <li key={index}>
-                        <a href={item.url}>{dropdownItem}</a>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
-          </ul>
+          <Navigation links={homeLinks} isMobile={isMobile} />
         )}
       </div>
       <div
