@@ -28,8 +28,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/header/index.js",
-    "components/header/Header.jsx"
+    "components/organisms/Header/index.js",
+    "components/organisms/Header/Header.jsx"
   ],
   "exclude": ["node_modules"]
 }

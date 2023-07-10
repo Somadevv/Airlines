@@ -1,0 +1,23 @@
+{
+  "primary": [
+    {
+      "label": "Book Flights",
+      "url": "/book-flights",
+      "dropdown": true
+    },
+    {
+      "label": "Information",
+      "url": "/information",
+      "dropdown": true
+    },
+    {
+      "label": "Help",
+      "url": "/help",
+      "dropdown": true
+    },
+    {
+      "label": "Travel Agents",
+      "url": "/travel-agents"
+    }
+  ]
+}

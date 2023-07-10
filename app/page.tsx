@@ -1,8 +1,12 @@
-import { Header } from "@/components/header/Header";
-export default function Home() {
+"use client";
+import { Header } from "@/components/organisms/Header/Header";
+
+const Home = () => {
   return (
     <main>
       <Header />
     </main>
   );
-}
+};
+
+export default Home;

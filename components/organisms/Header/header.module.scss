@@ -1,0 +1,36 @@
+.header {
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &_logo {
+    & img {
+      max-width: 100px;
+      height: 32px;
+    }
+  }
+  &_navigation {
+    font-size: 14px;
+
+    // Manage booking
+    a {
+      color: inherit;
+      text-decoration: inherit;
+    }
+    &_menu {
+      position: absolute;
+      left: 0;
+      top: 99px;
+      background: #fff;
+      width: 100%;
+
+      ul {
+        list-style: none;
+
+        li {
+        }
+      }
+    }
+  }
+}
