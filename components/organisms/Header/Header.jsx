@@ -8,7 +8,7 @@ import logo from "../../../public/assets/images/logos/alternative-airlines.jpg";
 import menu from "../../../public/assets/icons/menu.svg";
 import close from "../../../public/assets/icons/close.png";
 
-// Navigation menu items,
+// Navigation menu items
 import data from "../../../data/navigation.json";
 
 export const Header = () => {
@@ -18,7 +18,7 @@ export const Header = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1439); // Adjust the breakpoint as needed
+      setIsMobile(window.innerWidth <= 1439);
     };
 
     handleResize();
@@ -33,13 +33,11 @@ export const Header = () => {
   const handleMenu = () => {
     setMenuEnabled(!menuEnabled);
   };
+
   const handleDropdownClick = (item) => {
-    if (activeDropdown === item.label) {
-      setActiveDropdown(null);
-    } else {
-      setActiveDropdown(item.label);
-    }
+    setActiveDropdown(activeDropdown === item.label ? null : item.label);
   };
+
   return (
     <Container type="global" className={styles.header}>
       <div className={styles.header_logo}>
@@ -51,7 +49,7 @@ export const Header = () => {
             {data.primary?.map((item) => (
               <li
                 key={item.label}
-                className={item.sublinks && styles.dropdownIcon}
+                className={item.sublinks ? styles.dropdownIcon : ""}
                 onClick={() => item.sublinks && handleDropdownClick(item)}
               >
                 {item.label}
