@@ -3,17 +3,17 @@
     {
       "label": "Book Flights",
       "url": "/book-flights",
-      "dropdown": true
+      "sublinks": ["Item 1", "Item 2", "Item 3"]
     },
     {
       "label": "Information",
       "url": "/information",
-      "dropdown": true
+      "sublinks": ["Item 1", "Item 2", "Item 3"]
     },
     {
       "label": "Help",
       "url": "/help",
-      "dropdown": true
+      "sublinks": ["Item 1", "Item 2", "Item 3"]
     },
     {
       "label": "Travel Agents",
