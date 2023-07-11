@@ -70,12 +70,25 @@
   }
   &_enabled {
     &::after {
-      transform: rotate(90deg);
+      transform: rotate(90deg) translate(0, -24px);
     }
   }
   &_disabled {
     &::after {
-      transform: rotate(-90deg);
+      transform: rotate(90deg) translate(0, -24px);
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    &_enabled {
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+    &_disabled {
+      &::after {
+        transform: rotate(90deg);
+      }
     }
   }
 }

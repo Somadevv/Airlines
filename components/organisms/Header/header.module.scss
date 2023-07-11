@@ -35,6 +35,8 @@
       top: 98px;
       background: #fff;
       z-index: 9999;
+      width: 100%;
+
       @media only screen and (min-width: $desktop) {
         position: relative;
         top: unset;
