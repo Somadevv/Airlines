@@ -1,9 +1,10 @@
 "use client";
 import { Header } from "@/components/organisms/Header/Header";
 import { Banner } from "@/components/organisms/Banner/Banner";
-import data from "../data/navigation.json";
 import homepageImage from "../public/assets/images/background-image.jpg";
+import trustpilotStars from "../public/assets/images/trustpilot.png";
 import { TrustPilot } from "@/components/atoms/TrustPilot/TrustPilot";
+import trustpilotData from "../data/trustpilot.json";
 
 const Home = () => {
   return (
@@ -13,13 +14,8 @@ const Home = () => {
         bannerBackground={homepageImage}
         title="Search and book flights to Australia"
         body="Buy your flights now and pay later"
-        image={{
-          src: homepageImage,
-          alt: "Alternative Airlines",
-          caption: <TrustPilot />,
-        }}
       >
-        children
+        <TrustPilot data={trustpilotData} />
       </Banner>
     </main>
   );

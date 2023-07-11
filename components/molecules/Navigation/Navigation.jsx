@@ -38,7 +38,7 @@ export const Navigation = ({ links }) => {
   return (
     <ul className={styles.navigation}>
       {links.primary?.map((link) => (
-        <NavigationItem item={link} />
+        <NavigationItem item={link} key={link.url} />
       ))}
     </ul>
   );

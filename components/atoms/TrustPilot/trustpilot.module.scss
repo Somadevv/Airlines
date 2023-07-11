@@ -1,0 +1,37 @@
+@import "../../../styles/global/variables";
+
+.trustpilot {
+  &_image {
+    img {
+      // TODO:
+    }
+  }
+  &_statistics {
+    display: flex;
+    justify-content: space-between;
+    max-width: 210px;
+    margin: 0 auto;
+    margin-top: 8px;
+
+    .trustscore,
+    .reviews {
+      padding: 5px;
+      white-space: nowrap;
+      color: $colour-text-blue;
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    .trustscore {
+      border-right: 1px solid rgba(9, 26, 75, 0.16);
+
+      h1 {
+        color: red;
+      }
+    }
+    .reviews {
+    }
+  }
+}

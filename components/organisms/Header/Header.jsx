@@ -39,14 +39,14 @@ export const Header = () => {
       <div className={styles.header_logo}>
         <Image src={logo} alt="Alternative Airlines" />
       </div>
-      <div className={styles.header_navigation_menu}>
-        {(!isMobile || (isMobile && menuEnabled)) && (
+      {(!isMobile || (isMobile && menuEnabled)) && (
+        <div className={styles.header_navigation_menu}>
           <Navigation links={homeLinks} isMobile={isMobile} />
-        )}
-      </div>
+        </div>
+      )}
       <div
         className={styles.header_navigation}
-        onClick={isMobile && handleMenu}
+        onClick={(isMobile && handleMenu) || null}
       >
         {isMobile ? (
           <Image src={!menuEnabled ? menu : close} alt="Alternative Airlines" />

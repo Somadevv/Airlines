@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 0 32px 32px 32px;
 
   @media only screen and (min-width: $desktop) {
     gap: 50px;
@@ -44,18 +45,18 @@
 }
 
 .dropdownIcon {
-  &_enabled {
+  &_enabled,
+  &_disabled {
     &::after {
       content: "";
       display: inline-block;
       position: absolute;
-      right: -8px;
+      right: 0px;
       top: -2px;
       width: 25px;
       height: 25px;
       background-image: url("../../../public/assets/icons/arrow-right.svg");
       background-repeat: no-repeat;
-      transform: rotate(90deg);
       background-position: center;
 
       @media only screen and (min-width: $desktop) {
@@ -64,24 +65,14 @@
       }
     }
   }
+  &_enabled {
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
   &_disabled {
     &::after {
-      content: "";
-      display: inline-block;
-      position: absolute;
-      right: -8px;
-      top: -2px;
-      width: 25px;
-      height: 25px;
-      background-image: url("../../../public/assets/icons/arrow-right.svg");
-      background-repeat: no-repeat;
       transform: rotate(-90deg);
-      background-position: center;
-
-      @media only screen and (min-width: $desktop) {
-        right: -28px;
-        top: -5px;
-      }
     }
   }
 }
