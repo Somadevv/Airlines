@@ -1,0 +1,12 @@
+@import "../../../styles/global/variables";
+
+.button {
+  border-radius: 8px;
+  border: 1px solid #e6e9f0;
+  background: #fff;
+
+  &_active {
+    background: $colour-main-blue;
+    color: #fff;
+  }
+}

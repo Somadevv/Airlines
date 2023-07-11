@@ -18,8 +18,10 @@
   flex-direction: column;
   text-align: center;
   overflow: hidden;
-  padding: 40px 32px;
-
+  padding: 40px 0;
+  @media only screen and (min-width: $tablet) {
+    padding: 80px 0;
+  }
   &_cta {
     margin-bottom: 16px;
 
@@ -27,7 +29,7 @@
       margin-bottom: 16px;
     }
     p {
-      font-size: 18px;
+      font-size: 16px;
       margin-bottom: 24px;
       color: $colour-text-blue;
     }

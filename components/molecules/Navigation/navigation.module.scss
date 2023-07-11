@@ -1,14 +1,17 @@
 @import "../../../styles/global/variables";
 
 .navigation {
+  position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
   padding: 0 32px 32px 32px;
 
   @media only screen and (min-width: $desktop) {
     gap: 50px;
     flex-direction: row;
+    padding: unset;
   }
 
   li {
@@ -17,7 +20,7 @@
     cursor: pointer;
 
     @media only screen and (min-width: $desktop) {
-      font-size: 14px;
+      font-size: 16px;
       margin-bottom: 0;
       flex-direction: row;
     }

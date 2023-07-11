@@ -24,13 +24,16 @@
     a {
       color: inherit;
       text-decoration: inherit;
+
+      @media only screen and (min-width: $desktop) {
+        font-size: 16px;
+      }
     }
     &_menu {
       position: absolute;
       left: 0;
       top: 98px;
       background: #fff;
-      width: 100%;
       z-index: 9999;
       @media only screen and (min-width: $desktop) {
         position: relative;
