@@ -13,3 +13,55 @@
     cursor: pointer;
   }
 }
+
+.banner {
+  position: relative;
+  height: calc(100vh - 99px);
+  // background: linear-gradient(
+  //     180deg,
+  //     rgba(255, 255, 255, 0.6) 0%,
+  //     rgba(255, 255, 255, 0) 100%
+  //   ),
+  //   url("../../../public/assets/images/background-image.jpg") center bottom /
+  //     cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+
+  &_cta {
+    h1 {
+      margin-bottom: 16px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .image_caption {
+      //
+    }
+  }
+
+  .trustpilot_ratings {
+    &_trustscore {
+    }
+    &_reviews {
+    }
+  }
+}
+
+.banner-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.4);
+}

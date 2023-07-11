@@ -12,7 +12,7 @@ import { Navigation } from "../../molecules/Navigation/Navigation";
 
 import homeLinks from "../../../data/navigation.json";
 
-export const Header = ({ data }) => {
+export const Header = () => {
   const [menuEnabled, setMenuEnabled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
