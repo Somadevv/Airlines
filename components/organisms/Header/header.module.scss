@@ -1,0 +1,48 @@
+@import "../../../styles/global/variables";
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  &_logo {
+    & img {
+      max-width: 100px;
+      height: 32px;
+      @media only screen and (min-width: $tablet) {
+        max-width: 132px;
+        height: 40px;
+      }
+    }
+  }
+  &_navigation {
+    font-size: 14px;
+
+    // Manage booking
+    a {
+      color: inherit;
+      text-decoration: inherit;
+
+      @media only screen and (min-width: $desktop) {
+        font-size: 16px;
+      }
+    }
+    &_menu {
+      position: absolute;
+      left: 0;
+      top: 98px;
+      background: #fff;
+      z-index: 9999;
+      width: 100%;
+
+      @media only screen and (min-width: $desktop) {
+        position: relative;
+        top: unset;
+        left: unset;
+        flex-grow: 2;
+      }
+    }
+  }
+}

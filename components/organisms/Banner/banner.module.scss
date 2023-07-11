@@ -1,0 +1,46 @@
+@import "../../../styles/global/variables";
+.banner {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.banner {
+  position: relative;
+  height: calc(100vh - 99px);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+  padding: 40px 0;
+  @media only screen and (min-width: $tablet) {
+    padding: 80px 0;
+  }
+  &_cta {
+    margin-bottom: 16px;
+
+    h1 {
+      margin-bottom: 16px;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 24px;
+      color: $colour-text-blue;
+    }
+  }
+}
+
+.banner-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.4);
+}

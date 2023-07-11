@@ -1,0 +1,94 @@
+@import "../../../styles/global/variables";
+
+.navigation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0 32px 32px 32px;
+
+  @media only screen and (min-width: $desktop) {
+    gap: 50px;
+    flex-direction: row;
+    padding: unset;
+  }
+
+  li {
+    position: relative;
+    font-size: 20px;
+    cursor: pointer;
+
+    @media only screen and (min-width: $desktop) {
+      font-size: 16px;
+      margin-bottom: 0;
+      flex-direction: row;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      white-space: nowrap;
+      font-weight: 500;
+    }
+  }
+}
+
+.dropdown_container {
+  position: relative;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px;
+  width: 100%;
+  padding-top: 10px;
+
+  @media only screen and (min-width: $desktop) {
+    position: absolute;
+  }
+}
+
+.dropdownIcon {
+  &_enabled,
+  &_disabled {
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: -2px;
+      width: 25px;
+      height: 25px;
+      background-image: url("../../../public/assets/icons/arrow-right.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @media only screen and (min-width: $desktop) {
+        right: -28px;
+        top: -5px;
+      }
+    }
+  }
+  &_enabled {
+    &::after {
+      transform: rotate(90deg) translate(0, -24px);
+    }
+  }
+  &_disabled {
+    &::after {
+      transform: rotate(90deg) translate(0, -24px);
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    &_enabled {
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+    &_disabled {
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "../../../styles/global/variables";
+.container {
+  margin: 0 auto;
+
+  &_global {
+    padding: 0 32px;
+    @media only screen and (min-width: $tablet) {
+      padding: 0 47px;
+    }
+
+    @media only screen and (min-width: $desktop) {
+      padding: 0 160px;
+    }
+  }
+
+  &_content {
+    padding: 0 16px;
+    @media only screen and (min-width: $tablet) {
+      padding: 0 32px;
+    }
+
+    @media only screen and (min-width: $desktop) {
+      padding: 0 64px;
+    }
+  }
+}
